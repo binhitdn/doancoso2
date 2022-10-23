@@ -1,0 +1,14 @@
+.container {
+    .body {
+        display: flex;
+        flex-direction: row;
+        height: calc(100vh - 50px);
+        .sidebar {
+           height: calc(100vh - 50px);
+           
+        }
+        .content {
+            padding-left: 75px;
+        }
+    }
+}
