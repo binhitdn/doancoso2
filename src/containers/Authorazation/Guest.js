@@ -5,14 +5,13 @@ import Login from '../../containers/Authorazation/Login';
 
 import './scss/Guess.scss';
 import NavBar from '../Guest/ContainerPage/NavBar';
+import HomePage from '../Guest/Page/HomePage';
+import Service from '../Guest/Page/Sections/Service';
 
 function Guest() {
     return (
-       <Fragment>
-              
-               
-              <BrowserRouter>
-              
+       <Fragment>   
+              <BrowserRouter>        
               <div className="container">
               <div class="header">
                 <NavBar />
@@ -20,29 +19,25 @@ function Guest() {
               <div className="body">
                 <div className="sidebar">
                 <SideBar />
-                </div>
-
+              </div>
                 <div className="content">
-                <Routes>
-              
+                <Routes>            
             <Route path="/" element={
-                <h1>Tôi là khách</h1>
-            } />
-            
+                    <>
+                      <h1>Tôi là khách</h1>
+                    <Service />
+                    </>
+            } />          
             <Route path="/login" element={
                 <Login />
-            } />
-            
+            } />           
             <Route path="*" element={<h1>404: Not Found</h1>} />
         </Routes>
                 </div>
-              </div>
-
-              </div>
-              
-              </BrowserRouter>
-              
-                    
+            </div>
+            
+              </div>            
+              </BrowserRouter>                  
        </Fragment>
     );
 }
