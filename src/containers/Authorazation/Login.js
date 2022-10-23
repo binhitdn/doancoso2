@@ -39,7 +39,7 @@ function Login() {
                 Dang nhap voi tu cach admin
             </button>
             <button className="btn btn-primary" onClick={handleClickLoginDoctor}>
-                Dang nhap voi tu cach user
+                Dang nhap voi tu cach doctor
             </button>
         </div>
     );
