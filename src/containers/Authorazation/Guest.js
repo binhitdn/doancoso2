@@ -8,6 +8,9 @@ import NavBar from '../Guest/ContainerPage/NavBar';
 import HomePage from '../Guest/Page/HomePage';
 import Service from '../Guest/Page/Sections/Service';
 import Error404Page from '../Guest/Page/Error404Page';
+import Specialist from '../Guest/Page/Specialist';
+import Doctor from '../Guest/Page/Doctor';
+import HandBook from '../Guest/Page/HandBook';
 
 function Guest() {
     return (
@@ -28,7 +31,10 @@ function Guest() {
                       <h1>Tôi là khách</h1>
                       <HomePage />
                     </>
-            } />          
+            } />  
+                  <Route path="/specialty" element={<Specialist />} />      
+                  <Route path="/doctor" element={<Doctor />} />   
+                  <Route path="/handbook" element={<HandBook />} />
             <Route path="/login" element={
                 <Login />
             } />           
