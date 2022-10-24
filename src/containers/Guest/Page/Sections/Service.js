@@ -11,8 +11,7 @@ function Service() {
         autoplay: true,
         autoplaySpeed: 3000
     };
-    localStorage.setItem('foo', 'bar');
-    return (
+       return (
         <div className="section-specialty">
                 <div className="specialty-content">
                 <Slider {...settings}>
