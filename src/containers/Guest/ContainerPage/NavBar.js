@@ -11,7 +11,7 @@ function NavBar() {
 
                             <div className="header-logo"
                                 
-                            >LOGO</div>
+                            >HAPPY CARE</div>
 
                         </div>
                         <div className="center-content">

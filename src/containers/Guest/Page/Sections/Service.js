@@ -1,14 +1,17 @@
 import Slider from "react-slick";
 import "./scss/Service.scss";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 function Service() {
     let settings = {
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 1500
+        autoplaySpeed: 3000
     };
+    localStorage.setItem('foo', 'bar');
     return (
         <div className="section-specialty">
                 <div className="specialty-content">

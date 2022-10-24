@@ -2,6 +2,7 @@ import Cookies from 'js-cookie';
 import React, { Fragment, useContext } from 'react';
 import { Routes, Route, Link, BrowserRouter, Navigate } from 'react-router-dom';
 import { AuthToken } from '../../utils/AuthToken';
+import Error404Page from '../Guest/Page/Error404Page';
 
 function Admin() {
     const {author,setAuthor} = useContext(AuthToken);
@@ -30,7 +31,7 @@ function Admin() {
             <Route path="login" element={
                 <Navigate to="/" />
             } />
-            <Route path="*" element={<h1>404: Not Found</h1>} />
+            <Route path="*" element={<Error404Page/>} />
         </Routes>
               </BrowserRouter>
                     

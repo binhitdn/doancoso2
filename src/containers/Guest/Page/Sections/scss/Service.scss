@@ -6,16 +6,16 @@
 .section-specialty {
     font-family: "Montserrat", sans-serif;
     height: 330px;
-    width: 90vw;
+    width: 80%;
     margin: 0 auto;
     padding-top: 15px;
-    border: 1px solid red;
+    
     .img-customize {
         height: 300px;
         border-radius: 10px;
-        border: 1px solid #020000;
+        
         .section-specialty-item {
-            width: 80%;
+            width: 90%;
             margin: 0 auto;
             
             div {
@@ -65,7 +65,7 @@
 .slick-next::before {
     color:rgb(54, 50, 50) !important;
     font-family: "Font Awesome 6 Pro" !important;
-    content: '\f323' !important; 
+    content: '\f324' !important; 
     font-style: normal;
     font-weight: 900 !important;
     font-size:25px !important;
@@ -78,7 +78,7 @@
 .slick-prev::before {
     color:rgb(54, 50, 50) !important;
     font-family: "Font Awesome 6 Pro" !important;
-    content: '\f324' !important; 
+    content: '\f323' !important; 
     font-style: normal;
     font-weight: 900 !important;
     font-size:25px !important;

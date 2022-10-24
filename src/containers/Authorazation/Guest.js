@@ -7,16 +7,17 @@ import './scss/Guess.scss';
 import NavBar from '../Guest/ContainerPage/NavBar';
 import HomePage from '../Guest/Page/HomePage';
 import Service from '../Guest/Page/Sections/Service';
+import Error404Page from '../Guest/Page/Error404Page';
 
 function Guest() {
     return (
        <Fragment>   
               <BrowserRouter>        
-              <div className="container">
+              <div className="containers">
               <div class="header">
                 <NavBar />
               </div>
-              <div className="body">
+              <div className="bodys">
                 <div className="sidebar">
                 <SideBar />
               </div>
@@ -25,13 +26,15 @@ function Guest() {
             <Route path="/" element={
                     <>
                       <h1>Tôi là khách</h1>
-                    <Service />
+                      <HomePage />
                     </>
             } />          
             <Route path="/login" element={
                 <Login />
             } />           
-            <Route path="*" element={<h1>404: Not Found</h1>} />
+                  <Route path="*" element={
+                    <Error404Page />
+            } />
         </Routes>
                 </div>
             </div>
