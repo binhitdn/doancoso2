@@ -40,14 +40,14 @@ const SideBar = () => {
             link: "/doctor",
             icon: "fa-solid fa-user-doctor"
         },
-        {
-            id: 4,
-            en: "Health Facilities",
-            vi: "Cơ sở y tế",
-            jp: "医療施設",
-            link: "/clinic",
-            icon: "fa-solid fa-house-chimney-medical"
-        },
+        // {
+        //     id: 4,
+        //     en: "Health Facilities",
+        //     vi: "Cơ sở y tế",
+        //     jp: "医療施設",
+        //     link: "/clinic",
+        //     icon: "fa-solid fa-house-chimney-medical"
+        // },
         {
             id: 5,
             en: "HandBook",
@@ -56,14 +56,14 @@ const SideBar = () => {
             link: "/handbook",
             icon: "fa-solid fa-newspaper"
         },
-        {
-            id: 6,
-            en: "Community",
-            vi: "Cộng đồng",
-            jp: "コミュニティ",
-            link: "/community",
-            icon: "fa-solid fa-earth-americas"
-        }
+        // {
+        //     id: 6,
+        //     en: "Community",
+        //     vi: "Cộng đồng",
+        //     jp: "コミュニティ",
+        //     link: "/community",
+        //     icon: "fa-solid fa-earth-americas"
+        // }
     ]
 
     return (
