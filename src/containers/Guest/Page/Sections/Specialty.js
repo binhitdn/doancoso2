@@ -2,6 +2,8 @@ import Slider from "react-slick";
 import "./scss/Specialty.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import specialtydata from "../../../../data/specialtydata";
+
 function Specialty() {
     let settings = {
         infinite: true,
@@ -9,7 +11,33 @@ function Specialty() {
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000
+        autoplaySpeed: 3000,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 778,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
     };
     
     return (
@@ -21,42 +49,25 @@ function Specialty() {
                 <div className="specialty-content">
                 <Slider {...settings}>
             
-                    <div className="img-customize" >
+                    
+                    {specialtydata &&
+                        specialtydata.map((item, index) => {
+                            return (
+                                <div className="img-customize" >
                     <div className="section-specialty-item">
                         <div style={{
-                            background: `url('https://cdn.bookingcare.vn/fo/2022/08/02/232252-cam-bien-dau-doc-freestyle-libre.jpg')`
+                            background: `url(${item.image})`
                         }}>           
                             </div>
-                        <p>Khoa khoa</p>
+                                        <p>{item.name}</p>
                     </div>
                     </div>
-                    <div className="img-customize" >
-                    <div className="section-specialty-item">
-                        <div style={{
-                            background: `url('https://cdn.bookingcare.vn/fo/2022/08/02/232252-cam-bien-dau-doc-freestyle-libre.jpg')`
-                        }}>           
-                            </div>
-                        <p>Khoa khoa</p>
-                    </div>
-                    </div>
-                    <div className="img-customize" >
-                    <div className="section-specialty-item">
-                        <div style={{
-                            background: `url('https://cdn.bookingcare.vn/fo/2022/08/02/232252-cam-bien-dau-doc-freestyle-libre.jpg')`
-                        }}>           
-                            </div>
-                        <p>Khoa khoa</p>
-                    </div>
-                    </div>
-                    <div className="img-customize" >
-                    <div className="section-specialty-item">
-                        <div style={{
-                            background: `url('https://cdn.bookingcare.vn/fo/2022/08/02/232252-cam-bien-dau-doc-freestyle-libre.jpg')`
-                        }}>           
-                            </div>
-                        <p>Khoa khoa</p>
-                    </div>
-              </div>
+                            )
+                        }
+                        )
+                   }
+                    
+              
                 
 
             
