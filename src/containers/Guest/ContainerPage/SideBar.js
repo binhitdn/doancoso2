@@ -68,7 +68,7 @@ const SideBar = () => {
 
     return (
         
-            <div className="side-bar">
+            <div className="side-bars">
                 <ul className="side-bar-list">
                     { menuItems &&
                         menuItems.map((item, index) => {

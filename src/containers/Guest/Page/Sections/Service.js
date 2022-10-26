@@ -2,6 +2,7 @@ import Slider from "react-slick";
 import "./scss/Service.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import servicedata from "../../../../data/servicedata";
 function Service() {
     let settings = {
         infinite: true,
@@ -41,76 +42,35 @@ function Service() {
         <div className="section-specialty">
                 <div className="specialty-content">
                 <Slider {...settings}>
-      <div className="img-customize">
-            <div className="section-specialty-item">
-                <div style={{
-                    background: `url('https://cdn.bookingcare.vn/fo/2022/08/02/232252-cam-bien-dau-doc-freestyle-libre.jpg')`
-                }}>               </div>
-                <h4>Xét nghiệm COVID</h4>
-                <ul>
-                    <li>Tầm soát và xác định COVID-19</li>
-                    <li>Phương pháp Test nhanh </li>
-                    <li>Theo quy chuẩn Bộ Y tế</li>
-                </ul>
-                <a href="#">XEM THÊM <i className="fa-solid fa-share-from-square"></i></a>
-            </div>
-      </div>
-      <div className="img-customize">
-            <div className="section-specialty-item">
-                <div style={{
-                    background: `url('https://cdn.bookingcare.vn/fo/2022/08/02/232252-cam-bien-dau-doc-freestyle-libre.jpg')`
-                }}>               </div>
-                <h4>Xét nghiệm COVID</h4>
-                <ul>
-                    <li>Tầm soát và xác định COVID-19</li>
-                    <li>Phương pháp Test nhanh </li>
-                    <li>Theo quy chuẩn Bộ Y tế</li>
-                </ul>
-                <a href="#">XEM THÊM <i className="fa-solid fa-share-from-square"></i></a>
-            </div>
-      </div>
-      <div className="img-customize">
-            <div className="section-specialty-item">
-                <div style={{
-                    background: `url('https://cdn.bookingcare.vn/fo/2022/08/02/232252-cam-bien-dau-doc-freestyle-libre.jpg')`
-                }}>               </div>
-                <h4>Xét nghiệm COVID</h4>
-                <ul>
-                    <li>Tầm soát và xác định COVID-19</li>
-                    <li>Phương pháp Test nhanh </li>
-                    <li>Theo quy chuẩn Bộ Y tế</li>
-                </ul>
-                <a href="#">XEM THÊM <i className="fa-solid fa-share-from-square"></i></a>
-            </div>
-      </div>
-      <div className="img-customize">
-            <div className="section-specialty-item">
-                <div style={{
-                    background: `url('https://cdn.bookingcare.vn/fo/2022/08/02/232252-cam-bien-dau-doc-freestyle-libre.jpg')`
-                }}>               </div>
-                <h4>Xét nghiệm COVID</h4>
-                <ul>
-                    <li>Tầm soát và xác định COVID-19</li>
-                    <li>Phương pháp Test nhanh </li>
-                    <li>Theo quy chuẩn Bộ Y tế</li>
-                </ul>
-                <a href="#">XEM THÊM <i className="fa-solid fa-share-from-square"></i></a>
-            </div>
-      </div>
-      <div className="img-customize">
-            <div className="section-specialty-item">
-                <div style={{
-                    background: `url('https://cdn.bookingcare.vn/fo/2022/08/02/232252-cam-bien-dau-doc-freestyle-libre.jpg')`
-                }}>               </div>
-                <h4>Xét nghiệm COVID</h4>
-                <ul>
-                    <li>Tầm soát và xác định COVID-19</li>
-                    <li>Phương pháp Test nhanh </li>
-                    <li>Theo quy chuẩn Bộ Y tế</li>
-                </ul>
-                <a href="#">XEM THÊM <i className="fa-solid fa-share-from-square"></i></a>
-            </div>
-      </div>
+                       {
+                           servicedata && servicedata.map((item, index) => {
+                                 return (
+                                    <div className="img-customize">
+                                    <div className="section-specialty-item">
+                                        <div style={{
+                                            background: `url(${item.image})`,
+                                        }}>               </div>
+                                             <h4>{ item.name}</h4>
+                                        <ul>
+                                            {/* <li>Tầm soát và xác định COVID-19</li>
+                                            <li>Phương pháp Test nhanh </li>
+                                            <li>Theo quy chuẩn Bộ Y tế</li> */}
+                                                 {
+                                                     item.description && item.description.map((item, index) => {
+                                                            return (
+                                                                <li>{item}</li>
+                                                            )
+                                                        })
+                                                 }
+                                        </ul>
+                                        <a href="#">XEM THÊM <i className="fa-solid fa-share-from-square"></i></a>
+                                    </div>
+                              </div> 
+                                 )
+                           }
+                           )
+      }
+      
       
       
     </Slider>

@@ -46,7 +46,7 @@ $breakpoints: (
         
         height: calc(100vh - 50px);
 
-        .sidebar {
+        .sidebars {
            height: calc(100vh - 50px);
            @include for-size(tablet-lg) {
             display:none;

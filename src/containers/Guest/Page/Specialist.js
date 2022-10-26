@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import specialtydata from "../../../data/specialtydata";
 import "./scss/Specialist.scss";
 function Specialist() {
     return (
@@ -21,10 +22,13 @@ function Specialist() {
             <div class="special-page__content">
                 <div class="special-page__content__specialties">
                             
+                    {
+                        specialtydata && specialtydata.map((item, index) => {
+                            return (
                                 <div class="special-page__content__specialties__item"
                                 >
                                 <div class="div-special-background"
-                                style={{background: `url('https://cdn.bookingcare.vn/fo/2022/08/02/232252-cam-bien-dau-doc-freestyle-libre.jpg')`}}
+                                style={{background: `url(${item.image})`}}
                                 >
                                  <Link to={`/specialities/`} className="view_specialty_detail">
                                      <div className="detail-btn">
@@ -32,8 +36,12 @@ function Specialist() {
                                      </div>
                                     </Link>       
                                 </div>
-                                <p class="div-special-name">Khoa Khoa</p>
+                                    <p class="div-special-name">{ item.name}</p>
                             </div>
+                            )
+                        })
+                        
+                               }
                 </div>
             </div>
 

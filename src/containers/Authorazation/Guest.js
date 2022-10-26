@@ -21,16 +21,16 @@ function Guest() {
                 <NavBar />
               </div>
               <div className="bodys">
-                <div className="sidebar">
+                <div className="sidebars">
                 <SideBar />
               </div>
                 <div className="content">
                 <Routes>            
             <Route path="/" element={
-                    <>
-                      <h1>Tôi là khách</h1>
+                    
+                      
                       <HomePage />
-                    </>
+                    
             } />  
                   <Route path="/specialty" element={<Specialist />} />      
                   <Route path="/doctor" element={<Doctor />} />   

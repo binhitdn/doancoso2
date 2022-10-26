@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import "./scss/Doctor.scss"
+import doctordata from "../../../data/doctordata";
+
 function Doctor() {
     return (
         <div class="doctor-page">
@@ -23,80 +25,31 @@ function Doctor() {
                     
                     
                                 
-                                        <Link className="img-customize" 
+                    
+                    
+                    
+                    
+                {
+                        doctordata && doctordata.map((item, index) => {
+                            return (
+                                <Link className="img-customize" 
                                         to={"doctors/"}
                                    
                                 >
                                     <div className="section-doctor-trend-item">
                                        
                                         <div className="anh-bac-si" style={{
-                                            background: `url("https://www.fvhospital.com/wp-content/uploads/2018/03/dr-vo-trieu-dat-2020.jpg")`
+                                            background: `url(${item.image})`
                                         }}>
 
                                         </div>
                                     </div>
 
                                     <div className="name">
-                                        <h6 class="name-doctor">Tiến SĨ A</h6>
-                                        <p>Khoa xương khớp</p>
-                                        <span>Lượt xem: 0</span> 
-                                        <span>Lượt khám: 0</span>
-                                        <div>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                        </div>
-
-                                    </div>
-                    </Link>
-                    <Link className="img-customize" 
-                                        to={"doctors/"}
-                                   
-                                >
-                                    <div className="section-doctor-trend-item">
-                                       
-                                        <div className="anh-bac-si" style={{
-                                            background: `url("https://www.fvhospital.com/wp-content/uploads/2018/03/dr-vo-trieu-dat-2020.jpg")`
-                                        }}>
-
-                                        </div>
-                                    </div>
-
-                                    <div className="name">
-                                        <h6 class="name-doctor">Tiến SĨ A</h6>
-                                        <p>Khoa xương khớp</p>
-                                        <span>Lượt xem: 0</span> 
-                                        <span>Lượt khám: 0</span>
-                                        <div>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                        </div>
-
-                                    </div>
-                    </Link>
-                    <Link className="img-customize" 
-                                        to={"doctors/"}
-                                   
-                                >
-                                    <div className="section-doctor-trend-item">
-                                       
-                                        <div className="anh-bac-si" style={{
-                                            background: `url("https://www.fvhospital.com/wp-content/uploads/2018/03/dr-vo-trieu-dat-2020.jpg")`
-                                        }}>
-
-                                        </div>
-                                    </div>
-
-                                    <div className="name">
-                                        <h6 class="name-doctor">Tiến SĨ A</h6>
-                                        <p>Khoa xương khớp</p>
-                                        <span>Lượt xem: 0</span> 
-                                        <span>Lượt khám: 0</span>
+                                        <h6 class="name-doctor">{item.name }</h6>
+                                        <p class="name-special">{item.specialty}</p>
+                                        <span>Lượt xem: {item.view}</span>
+                                        <span>Lượt đặt khám: {item.booked}</span>
                                         <div>
                                             <i class="fa fa-star" aria-hidden="true"></i>
                                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -107,6 +60,10 @@ function Doctor() {
 
                                     </div>
                                 </Link>
+                            )
+                        }
+                        )
+                    }
                                 
                            
                 </div>

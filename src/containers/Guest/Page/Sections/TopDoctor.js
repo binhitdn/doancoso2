@@ -3,6 +3,7 @@ import './scss/TopDoctor.scss';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import doctordata from "../../../../data/doctordata";
 function TopDoctor() {
     let settings = {
         infinite: true,
@@ -47,86 +48,30 @@ function TopDoctor() {
             <div className="specialty-content">
                 <Slider {...settings}>
                         
-                            <div className="img-customize" 
+                    {
+                        doctordata && doctordata.map((doctor, index) => {
+                            return (
+                                <div className="img-customize" 
                                
-                            >
-                                <div className="section-doctor-trend-item">
-                                    <div className="anh-bac-si" style={{
-                                        background: `url('https://cdn.bookingcare.vn/fo/2022/08/02/232252-cam-bien-dau-doc-freestyle-libre.jpg')`
-                                    }}>
-
+                                >
+                                    <div className="section-doctor-trend-item">
+                                        <div className="anh-bac-si" style={{
+                                            background: `url(${doctor.image})`,
+                                        }}>
+    
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div className="name">
-                                    <h6>Bac Bac si A</h6>
-                                    <p>Khoa xương khớp</p>
-                                </div>
-                    </div>
-                    <div className="img-customize" 
-                               
-                            >
-                                <div className="section-doctor-trend-item">
-                                    <div className="anh-bac-si" style={{
-                                        background: `url('https://cdn.bookingcare.vn/fo/2022/08/02/232252-cam-bien-dau-doc-freestyle-libre.jpg')`
-                                    }}>
-
+    
+                                    <div className="name">
+                                        <h6>{ doctor.name}</h6>
+                                        <p>{ doctor.specialty}</p>
                                     </div>
-                                </div>
-
-                                <div className="name">
-                                    <h6>Bac Bac si A</h6>
-                                    <p>Khoa xương khớp</p>
-                                </div>
-                    </div>
-                    <div className="img-customize" 
-                               
-                            >
-                                <div className="section-doctor-trend-item">
-                                    <div className="anh-bac-si" style={{
-                                        background: `url('https://cdn.bookingcare.vn/fo/2022/08/02/232252-cam-bien-dau-doc-freestyle-libre.jpg')`
-                                    }}>
-
-                                    </div>
-                                </div>
-
-                                <div className="name">
-                                    <h6>Bac Bac si A</h6>
-                                    <p>Khoa xương khớp</p>
-                                </div>
-                    </div>
-                    <div className="img-customize" 
-                               
-                            >
-                                <div className="section-doctor-trend-item">
-                                    <div className="anh-bac-si" style={{
-                                        background: `url('https://cdn.bookingcare.vn/fo/2022/08/02/232252-cam-bien-dau-doc-freestyle-libre.jpg')`
-                                    }}>
-
-                                    </div>
-                                </div>
-
-                                <div className="name">
-                                    <h6>Bac Bac si A</h6>
-                                    <p>Khoa xương khớp</p>
-                                </div>
-                    </div>
-                    <div className="img-customize" 
-                               
-                            >
-                                <div className="section-doctor-trend-item">
-                                    <div className="anh-bac-si" style={{
-                                        background: `url('https://cdn.bookingcare.vn/fo/2022/08/02/232252-cam-bien-dau-doc-freestyle-libre.jpg')`
-                                    }}>
-
-                                    </div>
-                                </div>
-
-                                <div className="name">
-                                    <h6>Bac Bac si A</h6>
-                                    <p>Khoa xương khớp</p>
-                                </div>
-                            </div>
+                        </div>
+                            )
+                        }
+                        )
+                           }
+                    
                         
                 </Slider>
             </div>
