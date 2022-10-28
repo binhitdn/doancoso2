@@ -1,3 +1,4 @@
+/*
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import List from "./pages/list/List";
@@ -19,7 +20,7 @@ function App() {
                     <Route path="/">
                         <Route index element={<Home/>}/>
                         <Route path="login" element={<Login/>}/>
-                        <Route path="users">
+                        <Route path="doctors">
                             <Route index element={<List/>}/>
                             <Route path=":userId" element={<Single/>}/>
                             <Route
@@ -27,7 +28,7 @@ function App() {
                                 element={<New inputs={userInputs} title="Add New User"/>}
                             />
                         </Route>
-                        <Route path="products">
+                        <Route path="patients">
                             <Route index element={<List/>}/>
                             <Route path=":productId" element={<Single/>}/>
                             <Route
@@ -43,3 +44,4 @@ function App() {
 }
 
 export default App;
+*/

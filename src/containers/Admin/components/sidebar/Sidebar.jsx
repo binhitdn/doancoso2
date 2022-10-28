@@ -22,13 +22,13 @@ const Sidebar = () => {
             <div className="center">
                 <ul>
                     <p className="title">LISTS</p>
-                    <Link to="/users" style={{textDecoration: "none"}}>
+                    <Link to="/doctors" style={{textDecoration: "none"}}>
                         <li>
                             <PeopleAltIcon className="icon"/>
                             <span>Doctors</span>
                         </li>
                     </Link>
-                    <Link to="/products" style={{textDecoration: "none"}}>
+                    <Link to="/patients" style={{textDecoration: "none"}}>
                         <li>
                             <PeopleIcon className="icon"/>
                             <span>Patients</span>
