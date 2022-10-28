@@ -1,10 +1,9 @@
-import "./sidebar.css";
-import DashboardIcon from "@mui/icons-material/Dashboard";
+import "./sidebar.scss";
 import PeopleIcon from '@mui/icons-material/People';
-import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
+import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import {Route, Link} from "react-router-dom";
 import {DarkModeContext} from "../../context/darkModeContext";
@@ -22,11 +21,6 @@ const Sidebar = () => {
             <hr/>
             <div className="center">
                 <ul>
-                    {/*<p className="title">MAIN</p>
-                    <li>
-                        <DashboardIcon className="icon"/>
-                        <span></span>
-                    </li>*/}
                     <p className="title">LISTS</p>
                     <Link to="/users" style={{textDecoration: "none"}}>
                         <li>
@@ -40,45 +34,33 @@ const Sidebar = () => {
                             <span>Patients</span>
                         </li>
                     </Link>
-                    <li>
-                        <LocalHospitalIcon className="icon"/>
-                        <span>Specialist</span>
-                    </li>
-                    <li>
-                        <AutoStoriesIcon className="icon"/>
-                        <span>Handbook</span>
-                    </li>
+                    <Link to="/specialist" style={{textDecoration: "none"}}>
+
+                        <li>
+                            <LocalHospitalIcon className="icon"/>
+                            <span>Specialist</span>
+                        </li>
+                    </Link>
+                    <Link to="/handbook" style={{textDecoration: "none"}}>
+
+                        <li>
+                            <AutoStoriesIcon className="icon"/>
+                            <span>Handbook</span>
+                        </li>
+                    </Link>
+                    <Link to="/accounts" style={{textDecoration: "none"}}>
+                        <li>
+                            <ManageAccountsIcon className="icon"/>
+                            <span>Accounts</span>
+                        </li>
+                    </Link>
                     <p className="title">USEFUL</p>
-                    {/*<li>
-                        <InsertChartIcon className="icon"/>
-                        <span></span>
-                    </li>*/}
-                    <li>
-                        <NotificationsIcon className="icon"/>
-                        <span>Notifications</span>
-                    </li>
-                    {/*<p className="title">SERVICE</p>
-                    <li>
-                        <SettingsSystemDaydreamOutlinedIcon className="icon"/>
-                        <span></span>
-                    </li>
-                    <li>
-                        <PsychologyOutlinedIcon className="icon"/>
-                        <span></span>
-                    </li>
-                    <li>
-                        <SettingsApplicationsIcon className="icon"/>
-                        <span></span>
-                    </li>
-                    <p className="title">USER</p>
-                    <li>
-                        <AccountCircleOutlinedIcon className="icon"/>
-                        <span></span>
-                    </li>
-                    <li>
-                        <ExitToAppIcon className="icon"/>
-                        <span></span>
-                    </li>*/}
+                    <Link to="/notifications" style={{textDecoration: "none"}}>
+                        <li>
+                            <NotificationsIcon className="icon"/>
+                            <span>Notifications</span>
+                        </li>
+                    </Link>
                 </ul>
             </div>
             <div className="bottom">
