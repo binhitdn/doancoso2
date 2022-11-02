@@ -7,6 +7,7 @@ import Slider from "./Slider/Slider";
 function HomePage() {
     return (
         <>
+        
             <Slider />
             <Service />
             <Specialty />

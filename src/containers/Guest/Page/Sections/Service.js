@@ -3,6 +3,7 @@ import "./scss/Service.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import servicedata from "../../../../data/servicedata";
+import { Link } from "react-router-dom";
 function Service() {
     let settings = {
         infinite: true,
@@ -63,7 +64,7 @@ function Service() {
                                                         })
                                                  }
                                         </ul>
-                                        <a href="#">XEM THÊM <i className="fa-solid fa-share-from-square"></i></a>
+                                        <Link to="/" className="xemthem">XEM THÊM <i className="fa-solid fa-share-from-square"></i></Link>
                                     </div>
                               </div> 
                                  )

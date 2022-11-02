@@ -1,0 +1,14 @@
+.admin {
+    .admin__header {
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .admin__body {
+        display: flex;
+        .admin__body__sidebar {
+            
+        }
+        .admin__body__content {
+            width: 100%;
+        }
+    }
+}

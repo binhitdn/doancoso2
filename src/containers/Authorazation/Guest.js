@@ -11,13 +11,24 @@ import Error404Page from '../Guest/Page/Error404Page';
 import Specialist from '../Guest/Page/Specialist';
 import Doctor from '../Guest/Page/Doctor';
 import HandBook from '../Guest/Page/HandBook';
+import Register from './Register';
+import { ToastContainer } from 'react-toastify';
+import { useContext } from 'react';
+import { useEffect } from 'react';
+import { AuthToken } from '../../utils/AuthToken';
 
 function Guest() {
+  const { loading, setLoading } = useContext(AuthToken);
+  useEffect(() => {
+    console.log("Tao nef");
+      setLoading(!loading);
+  }, []);
+  
     return (
        <Fragment>   
               <BrowserRouter>        
               <div className="containers">
-              <div class="header">
+              <div className="header">
                 <NavBar />
               </div>
               <div className="bodys">
@@ -37,7 +48,10 @@ function Guest() {
                   <Route path="/handbook" element={<HandBook />} />
             <Route path="/login" element={
                 <Login />
-            } />           
+            } />    
+            <Route path="/register" element={
+                <Register />
+            } />    
                   <Route path="*" element={
                     <Error404Page />
             } />
@@ -45,9 +59,23 @@ function Guest() {
                 </div>
             </div>
             
+
+            <ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+/>
               </div>            
               </BrowserRouter>                  
        </Fragment>
     );
+    
 }
 export default Guest;

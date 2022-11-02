@@ -1,5 +1,8 @@
 @import url("https://site-assets.fontawesome.com/releases/v6.1.2/css/all.css");
 
+ul {
+    list-style:square;
+}
 .anh1 {
     height: 100px;
 }
@@ -41,6 +44,11 @@
                 text-decoration: none;
                 text-align: center;
                 margin-top: 10px;
+            }
+            .xemthem {
+                color: #4b49db;
+                font-size: 14px;
+                font-weight: 600;
             }
         }
     }

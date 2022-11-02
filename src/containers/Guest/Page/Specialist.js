@@ -1,7 +1,31 @@
+import { useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import specialtydata from "../../../data/specialtydata";
+import { handleGetAllSpecialityApi } from "../../../services/specialtyService";
 import "./scss/Specialist.scss";
+
 function Specialist() {
+    const [specialty, setSpecialty] = useState([]);
+    var Buffer = require('buffer/').Buffer
+
+    let getDataSpecialty = async () => {
+        let data = await handleGetAllSpecialityApi();
+        setSpecialty(data.specialities);
+        console.log("specialty", data.specialities);
+    };
+    useEffect(() => {
+        getDataSpecialty();
+    }, []);
+    let parsePhoto = (image) => {
+        if (image) {
+
+            return new Buffer(image, 'base64').toString('binary');
+
+        } else {
+            return "";
+        }
+    }
     return (
 
         <div class="special-page">
@@ -23,12 +47,12 @@ function Specialist() {
                 <div class="special-page__content__specialties">
                             
                     {
-                        specialtydata && specialtydata.map((item, index) => {
+                        specialty && specialty.map((item, index) => {
                             return (
                                 <div class="special-page__content__specialties__item"
                                 >
                                 <div class="div-special-background"
-                                style={{background: `url(${item.image})`}}
+                                style={{background: `url(${parsePhoto(item.image)})`}}
                                 >
                                  <Link to={`/specialities/`} className="view_specialty_detail">
                                      <div className="detail-btn">

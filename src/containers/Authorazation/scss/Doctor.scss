@@ -1,0 +1,14 @@
+.doctor {
+    .doctor__header {
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .doctor__body {
+        display: flex;
+        .doctor__body__sidebar {
+            
+        }
+        .doctor__body__content {
+            width: 100%;
+        }
+    }
+}
